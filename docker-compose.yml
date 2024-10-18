@@ -1,0 +1,10 @@
+services:
+  bot-rewriter:
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./docker/dev/bot-rewriter/Dockerfile
+    container_name: app-bot-rewriter
